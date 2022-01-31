@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6b296a912a3da42a38e75e5fa7da3332
+timeCreated: 1507521534
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Mechsuit
+  fontNames:
+  - Mechsuit
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

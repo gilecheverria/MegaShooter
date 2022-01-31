@@ -1,0 +1,12 @@
+# Blender MTL File: 'power_up-1.blend'
+# Material Count: 1
+
+newmtl PowerUpMat
+Ns 607.270402
+Ka 0.812500 0.812500 0.812500
+Kd 0.800000 0.677116 0.006438
+Ks 0.714286 0.714286 0.714286
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3

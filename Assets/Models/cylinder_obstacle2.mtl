@@ -1,0 +1,15 @@
+# Blender MTL File: 'cylinder_obstacle3.blend'
+# Material Count: 1
+
+newmtl CylinderMat
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd /home/gilberto/Windows/Documents/UP/Unity/SpaceInvaders_5/Assets/Images/pattern_02/diffus.tga
+map_Bump /home/gilberto/Windows/Documents/UP/Unity/SpaceInvaders_5/Assets/Images/pattern_02/normal.tga
+map_Ks /home/gilberto/Windows/Documents/UP/Unity/SpaceInvaders_5/Assets/Images/pattern_02/specular.tga
