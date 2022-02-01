@@ -13,15 +13,16 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-	public GameObject bulletPrefab;
-	public Transform[] shotSpawns;
-	public float fireDelay;
-	public int weaponLevel;
+	[SerializeField] GameObject bulletPrefab;
+	[SerializeField] Transform[] shotSpawns;
+	[SerializeField] float fireDelay;
+	[SerializeField] int weaponLevel;
 
     List<int> spawnIndices;
     float nextFire;
     GUIManager guiManager;
     AudioSource audioSource;
+    Transform bulletParent;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,8 @@ public class PlayerWeapon : MonoBehaviour
         guiManager.UpdateLevel(weaponLevel);
         // Get the source for the power up sound
         audioSource = GetComponent<AudioSource>();
+        // Get the empty that will be parent to all bullets
+        bulletParent = GameObject.Find("BulletParent").transform;
     }
 
     // Update is called once per frame
@@ -53,7 +56,8 @@ public class PlayerWeapon : MonoBehaviour
     {
         foreach (int index in spawnIndices) {
             // Starting position of the bullet depends on the position of the ship
-            Instantiate(bulletPrefab, shotSpawns[index].position, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, shotSpawns[index].position, Quaternion.identity);
+            bullet.transform.parent = bulletParent;
         }
         // Set the time for the next shot
         nextFire = Time.time + fireDelay;

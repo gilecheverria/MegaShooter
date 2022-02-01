@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class RegularSpawn : MonoBehaviour {
 
+	[SerializeField] Transform parentObject;
 	[SerializeField] GameObject enemyPrefab;
 	[SerializeField] float minDelay = 0.5f;
 	[SerializeField] float maxDelay = 3.0f;
@@ -27,7 +28,8 @@ public class RegularSpawn : MonoBehaviour {
 
 	        // Get a random starting location
 			Vector3 startPosition = new Vector3(Random.Range(-8f, 8f), 20, 0);
-			Instantiate(enemyPrefab, startPosition, Quaternion.identity);
+			GameObject obj = Instantiate(enemyPrefab, startPosition, Quaternion.identity);
+			obj.transform.parent = parentObject;
 	    }
     }
 }

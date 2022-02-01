@@ -9,8 +9,9 @@ using UnityEngine;
 
 public class IncrementingSpawn : MonoBehaviour {
 
-	public float spawnRate;
-	public GameObject enemyPrefab;
+	[SerializeField] Transform parentObject;
+	[SerializeField] GameObject enemyPrefab;
+	[SerializeField] float spawnRate;
 
 	float lastSpawn;
 
@@ -39,6 +40,7 @@ public class IncrementingSpawn : MonoBehaviour {
     {
         // Get a random starting location
         Vector3 startPosition = new Vector3(Random.Range(-8f, 8f), 20, 0);
-        Instantiate(prefab, startPosition, Quaternion.identity);
+        GameObject obj = Instantiate(prefab, startPosition, Quaternion.identity);
+		obj.transform.parent = parentObject;
     }
 }

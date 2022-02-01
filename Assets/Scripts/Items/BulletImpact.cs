@@ -15,8 +15,7 @@ public class BulletImpact : MonoBehaviour {
 	// Detect collisions with enemies
 	void OnTriggerEnter (Collider col)
     {
-        if(col.tag == "Enemy")
-        {
+        if(col.tag == "Enemy") {
             col.GetComponent<Health>().TakeDamage(damage);
 
             // Create a particle explosion
@@ -27,10 +26,13 @@ public class BulletImpact : MonoBehaviour {
             // Destroy the bullet with a small explosion
             Impact();
         }
-        if(col.tag == "Obstacle")
-        {
+        if(col.tag == "Obstacle") {
             // Destroy the bullet with a small explosion
             Impact();
+        }
+        if(col.tag == "Destroyer") {
+            // Just get rid of instances outside the playing field
+            Destroy(gameObject);
         }
     }
 
