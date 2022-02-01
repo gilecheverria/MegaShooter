@@ -125,7 +125,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5294435980863486347}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.7
   m_Height: 2
@@ -146,7 +146,7 @@ MonoBehaviour:
   motion: {x: 0, y: -6, z: 0}
   duration: 1
   width: 8
-  rotationMultiplier: 10
+  rotationMultiplier: 8
 --- !u!114 &8495497932128904007
 MonoBehaviour:
   m_ObjectHideFlags: 0

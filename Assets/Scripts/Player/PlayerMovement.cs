@@ -83,13 +83,6 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter(Collision collisionInfo)
-	{
-        if(collisionInfo.collider.tag == "Obstacle") {
-			KillPlayer();
-        }
-	}
-
 	void KillPlayer()
 	{
 		// Create an instance of the particle system

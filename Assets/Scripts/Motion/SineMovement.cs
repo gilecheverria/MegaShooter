@@ -15,11 +15,11 @@ public class SineMovement : MonoBehaviour {
     public float width = 1.0f;
     [SerializeField] float rotationMultiplier = 15;
 
-    int direction;
+    float direction;
 
     void Start () {
     	// Use a multiplier to determine the amplitude of the horizontal movement
-    	direction = Random.Range(-1, 1);
+    	direction = Random.Range(-1f, 1f);
     }
 	
 	// Update is called once per frame

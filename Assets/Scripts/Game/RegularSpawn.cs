@@ -9,7 +9,9 @@ using UnityEngine;
 
 public class RegularSpawn : MonoBehaviour {
 
-	public GameObject enemyPrefab;
+	[SerializeField] GameObject enemyPrefab;
+	[SerializeField] float minDelay = 0.5f;
+	[SerializeField] float maxDelay = 3.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +23,7 @@ public class RegularSpawn : MonoBehaviour {
     	while(true)
     	{
     		// Wait a random time
-    		yield return new WaitForSeconds(Random.Range(0.5f, 3f));
+    		yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
 
 	        // Get a random starting location
 			Vector3 startPosition = new Vector3(Random.Range(-8f, 8f), 20, 0);
