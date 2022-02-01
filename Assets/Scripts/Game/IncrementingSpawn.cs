@@ -38,7 +38,7 @@ public class IncrementingSpawn : MonoBehaviour {
     void Spawn(GameObject prefab)
     {
         // Get a random starting location
-        Vector3 startPosition = new Vector3(Random.Range(-8f, 8f), 15, 0);
+        Vector3 startPosition = new Vector3(Random.Range(-8f, 8f), 20, 0);
         Instantiate(prefab, startPosition, Quaternion.identity);
     }
 }
