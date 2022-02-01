@@ -32,8 +32,7 @@ public class GUIManager : MonoBehaviour {
         scoreText.text = ScoreManager.score.ToString();
 
         // Detect the pressing of the ESC key
-        if (Input.GetButtonDown("Pause"))
-        {
+        if (Input.GetButtonDown("Pause")) {
             PauseGame();
         }
     }
@@ -45,17 +44,14 @@ public class GUIManager : MonoBehaviour {
 
     // Method to pause/resume the game
     public void PauseGame() {
-        if (paused)
-        {
+        if (paused) {
             // Resume the game
             Time.timeScale = 1.0f;
             // Hide the gray overlay
             subimage.enabled = false;
             // Change the text of the button
             //textPause.text = "Pause";
-        }
-        else
-        {
+        } else {
             // Stop the game
             Time.timeScale = 0.0f;
             // Show the gray overlay

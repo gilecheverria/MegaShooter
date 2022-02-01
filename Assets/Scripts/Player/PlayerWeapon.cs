@@ -4,12 +4,12 @@
  *
  * Gilberto Echeverria
  * 18/09/2020
+ * 01/01/2022       Allow power-up beyong level 3
+ *                  Making the laser shoot faster
  */
 
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerWeapon : MonoBehaviour
 {
@@ -43,8 +43,7 @@ public class PlayerWeapon : MonoBehaviour
     void Update()
     {
         // Fire the cannon with a delay between shots
-        if (Input.GetButton("Fire1") && Time.time > nextFire)
-        {
+        if (Input.GetButton("Fire1") && Time.time > nextFire) {
             FireGun();
         }
     }
@@ -52,8 +51,7 @@ public class PlayerWeapon : MonoBehaviour
 	// Create a new bullet
 	void FireGun ()
     {
-        foreach (int index in spawnIndices)
-        {
+        foreach (int index in spawnIndices) {
             // Starting position of the bullet depends on the position of the ship
             Instantiate(bulletPrefab, shotSpawns[index].position, Quaternion.identity);
         }
@@ -61,14 +59,14 @@ public class PlayerWeapon : MonoBehaviour
         nextFire = Time.time + fireDelay;
     }
 
+    // Increase the power on the ship lasers
     public void IncreaseLevel()
     {
         weaponLevel++;
         guiManager.UpdateLevel(weaponLevel);
         audioSource.Play();
 
-        switch(weaponLevel)
-        {
+        switch(weaponLevel) {
             case 2:
                 spawnIndices.Remove(0);
                 spawnIndices.Add(1);
@@ -76,6 +74,13 @@ public class PlayerWeapon : MonoBehaviour
                 break;
             case 3:
                 spawnIndices.Add(0);
+                break;
+            // Levels higher than 3
+            default:
+                // Make the fire rate faster
+                if (fireDelay > 0) {
+                    fireDelay -= 0.02f * (weaponLevel - 3);
+                }
                 break;
         }
     }
