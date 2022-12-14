@@ -34,6 +34,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.07, z: 0}
   m_LocalScale: {x: 0.1, y: 0.5, z: 0.1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,10 +58,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -85,6 +88,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &13675586
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -270,6 +274,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!114 &419644655752662116
@@ -284,8 +289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200d9770bccacfa81aad0a2b5f51127d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 115368, guid: 409fdb35cbebf084cbff9122646b4c8b, type: 3}
+  explosionPrefab: {fileID: 115368, guid: 47589040b4a42679388215eb360c0fdb, type: 3}
   impactPrefab: {fileID: 161962, guid: 906f299373dc58340b9cc6868e5ae0b8, type: 3}
+  damage: 1
 --- !u!114 &-9182328896727536017
 MonoBehaviour:
   m_ObjectHideFlags: 0

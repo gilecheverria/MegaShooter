@@ -1,11 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+/*
+Script to keep control of the hitpoints of a game object
+
+Gilberto Echeverria
+2022-12-14
+*/
+
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] int maxHP = 1;
     [SerializeField] int worth = 1;
+    [SerializeField] GameObject explosion;
 
     int hp;
     bool alive;
@@ -31,6 +37,14 @@ public class Health : MonoBehaviour
 
         ScoreManager.score += worth;
         //Debug.Log("New score: " + ScoreManager.score);
+
+        // If a prefab for the explosion exists, create it and doom it to die
+        if (explosion != null) {
+            GameObject temp = Instantiate(explosion,
+                                          transform.position,
+                                          Quaternion.identity);
+            Destroy(temp, 2);
+        }
 
         // Destroy the enemy
         Destroy(gameObject);
