@@ -6,6 +6,7 @@
  * 18/09/2020
  * 01/01/2022       Allow power-up beyong level 3
  *                  Making the laser shoot faster
+ * 22/12/2022       Instantiate bullets with the same orientation as the empty
  */
 
 using System.Collections.Generic;
@@ -55,8 +56,11 @@ public class PlayerWeapon : MonoBehaviour
 	void FireGun ()
     {
         foreach (int index in spawnIndices) {
-            // Starting position of the bullet depends on the position of the ship
-            GameObject bullet = Instantiate(bulletPrefab, shotSpawns[index].position, Quaternion.identity);
+            // Starting position and orientation of the bullet depends on
+            // the empties attached to the ship
+            GameObject bullet = Instantiate(bulletPrefab,
+                                            shotSpawns[index].position,
+                                            shotSpawns[index].localRotation);
             bullet.transform.parent = bulletParent;
         }
         // Set the time for the next shot

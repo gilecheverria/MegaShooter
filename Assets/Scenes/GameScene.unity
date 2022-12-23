@@ -392,6 +392,7 @@ GameObject:
   - component: {fileID: 251071260}
   - component: {fileID: 251071266}
   - component: {fileID: 251071267}
+  - component: {fileID: 251071268}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: GameController
@@ -552,6 +553,25 @@ MonoBehaviour:
   maxDelay: 5
   separation: 4.5
   limit: 3
+--- !u!114 &251071268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 251071258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d227db60d0e2c8606b7cacad1e0a4118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondsToBoss: 60
+  spawners:
+  - {fileID: 251071265}
+  - {fileID: 251071261}
+  - {fileID: 251071260}
+  - {fileID: 251071266}
+  - {fileID: 251071267}
 --- !u!1 &294421132
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,9 +1111,11 @@ MonoBehaviour:
   samples:
   - {fileID: 8300000, guid: a4796ac3967ad0f428567bee35c29c50, type: 3}
   - {fileID: 8300000, guid: c5d0fffceb97a3d48b64426146a18fb3, type: 3}
+  - {fileID: 8300000, guid: c4fc900f76f120d9d9ea8559e04b4d5f, type: 3}
   scenes:
   - default
   - GameScene
+  - Boss
 --- !u!82 &799273106
 AudioSource:
   m_ObjectHideFlags: 0

@@ -16,7 +16,10 @@ public class BulletImpact : MonoBehaviour {
 	void OnTriggerEnter (Collider col)
     {
         if(col.tag == "Enemy") {
-            col.GetComponent<Health>().TakeDamage(damage);
+            Health health = col.GetComponent<Health>();
+            if (health) {
+                health.TakeDamage(damage);
+            }
 
             // Create a particle explosion
             GameObject explosion = Instantiate(explosionPrefab, col.gameObject.transform.position, Quaternion.identity);

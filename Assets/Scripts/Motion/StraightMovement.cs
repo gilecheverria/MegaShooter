@@ -13,6 +13,7 @@ public class StraightMovement : MonoBehaviour {
 
 	public bool random;
 	public Vector3 motion;
+	public float speed;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,8 @@ public class StraightMovement : MonoBehaviour {
 		if (random)
 		{
         	motion = new Vector3(Random.Range(-3f, 3f), -6, 0);
+		} else if (speed != 0) {
+			motion = Vector3.up * speed;
 		}
 	}
 	
