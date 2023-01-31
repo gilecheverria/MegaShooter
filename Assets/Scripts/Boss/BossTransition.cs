@@ -6,6 +6,8 @@ phases
 Using smooth transitions for slerp as explained here:
 https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples/
 
+NOTE: The rotation is not being applied to the transform. No idea why.
+
 Gilberto Echeverria
 2023-01-30
 */
@@ -29,7 +31,7 @@ public class BossTransition : MonoBehaviour
     {
         elapsed = 0;
         isMoving = true;
-Debug.Log("Rotating from: " + initialRot);
+//Debug.Log("Rotating from: " + initialRot);
     }
 
     // Update is called once per frame
@@ -51,13 +53,14 @@ Debug.Log("Rotating from: " + initialRot);
         t = t * t * (3f - 2f * t);
 
         transform.position = Vector3.Slerp(initialPos, finalPos, t);
+        initialRot = Quaternion.identity;
         transform.rotation = Quaternion.Slerp(initialRot, finalRot, t);
 
         elapsed += Time.deltaTime;
         if (elapsed > duration) {
             elapsed = duration;
             isMoving = false;
-Debug.Log("Rotating into: " + finalRot);
+//Debug.Log("Rotating into: " + finalRot);
         }
     }
 }

@@ -20,6 +20,7 @@ public class BossBehaviour : MonoBehaviour
     [SerializeField] BossWeapon bossWeap;
     [SerializeField] BossWeaponSpread bossSpread;
     [SerializeField] BossTransition bossTransit;
+    [SerializeField] GameObject shield;
     [SerializeField] float entranceDuration;
     [SerializeField] float stateDuration;
 
@@ -59,6 +60,7 @@ public class BossBehaviour : MonoBehaviour
     // Move the boss back to the center position
     IEnumerator ToCenter()
     {
+        shield.SetActive(true);
         bossTransit.enabled = true;
         bossTransit.initialPos = transform.position;
         bossTransit.initialRot = transform.rotation;
@@ -67,6 +69,7 @@ public class BossBehaviour : MonoBehaviour
 
         yield return new WaitForSeconds(bossTransit.duration);
 
+        shield.SetActive(false);
         bossTransit.enabled = false;
         state = BossState.SPREAD; 
         StartCoroutine(ToSpread());
