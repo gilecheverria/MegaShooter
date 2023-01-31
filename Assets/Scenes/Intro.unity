@@ -5881,7 +5881,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Version: 2022-12-14'
+  m_Text: 'Version: 2023-01-31'
 --- !u!222 &1262140701
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6114,9 +6114,11 @@ MonoBehaviour:
   samples:
   - {fileID: 8300000, guid: a4796ac3967ad0f428567bee35c29c50, type: 3}
   - {fileID: 8300000, guid: c5d0fffceb97a3d48b64426146a18fb3, type: 3}
+  - {fileID: 8300000, guid: c4fc900f76f120d9d9ea8559e04b4d5f, type: 3}
   scenes:
   - default
   - GameScene
+  - Boss
 --- !u!1 &1618127682
 GameObject:
   m_ObjectHideFlags: 0

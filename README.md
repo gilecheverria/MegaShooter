@@ -4,6 +4,15 @@ Unity project based on Space Megaforce
 Design notes:
 https://app.milanote.com/1PmxcB10Noab9s/megashooter
 
+## Testing
+To run a WebGL build:
+1. Configure Unity so that the build has no compression
+2. Run a local web server:
+```
+python3 -m http.server
+```
+3. Open the local address in a browser
+
 ## Resources:
 
 ### Music
