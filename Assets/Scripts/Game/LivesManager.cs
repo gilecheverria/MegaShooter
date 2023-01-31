@@ -88,6 +88,6 @@ public class LivesManager : MonoBehaviour {
 	IEnumerator ReturnToMenu()
 	{
 		yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("IntroScene");
+        SceneManager.LoadScene("Intro");
     }
 }

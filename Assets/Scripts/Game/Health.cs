@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     [SerializeField] int maxHP = 1;
     [SerializeField] int worth = 1;
     [SerializeField] GameObject explosion;
+    [SerializeField] HealthBar bar;
 
     int hp;
     bool alive;
@@ -21,13 +22,20 @@ public class Health : MonoBehaviour
     {
         hp = maxHP;    
         alive = true;
+        if (bar != null) {
+            bar.Init(maxHP);
+        }
     }
 
     public void TakeDamage(int amount)
     {
         hp -= amount;
         if (hp <= 0) {
+            hp = 0;
             Die();
+        }
+        if (bar != null) {
+            bar.SetValue(hp);
         }
     }
 

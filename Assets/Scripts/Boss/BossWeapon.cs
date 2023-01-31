@@ -5,8 +5,6 @@ Gilberto Echeverria
 2022-12-22
 */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossWeapon : MonoBehaviour
@@ -40,6 +38,9 @@ public class BossWeapon : MonoBehaviour
 	// Create a new bullet
 	void FireGun ()
     {
+        // Set the time for the next shot
+        nextFire = Time.time + fireDelay;
+        // Shoot from all the guns
         foreach (Transform empty in spawnerParent) {
             // Starting position and orientation of the bullet depends on
             // the empties attached to the ship
@@ -48,7 +49,5 @@ public class BossWeapon : MonoBehaviour
                                             empty.localRotation);
             bullet.transform.parent = bulletParent;
         }
-        // Set the time for the next shot
-        nextFire = Time.time + fireDelay;
     }
 }

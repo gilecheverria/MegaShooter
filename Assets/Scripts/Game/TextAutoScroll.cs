@@ -2,6 +2,8 @@
 Animate text to scroll so all of it can be seen in a single screen
 Based on the video at:
 https://www.youtube.com/watch?v=9a6GyAbhLUk
+Added an image mask to show the scrolling text inside, using this info:
+https://vionixstudio.com/2022/09/08/unity-ui-masking/
 
 Gilberto Echeverria
 2023-01-30

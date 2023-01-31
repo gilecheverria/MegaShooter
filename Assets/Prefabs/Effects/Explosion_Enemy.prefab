@@ -4832,7 +4832,7 @@ GameObject:
   - component: {fileID: 790776468291948631}
   - component: {fileID: 8953419111141867662}
   m_Layer: 0
-  m_Name: Exploision_Enemy
+  m_Name: Explosion_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

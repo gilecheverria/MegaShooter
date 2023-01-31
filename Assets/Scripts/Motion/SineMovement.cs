@@ -10,20 +10,27 @@ using UnityEngine;
 
 public class SineMovement : MonoBehaviour {
 
+    [SerializeField] float rotationMultiplier = 15;
+    [SerializeField] bool fixDirection;
+
 	public Vector3 motion;
     public float duration = 1.0f;
     public float width = 1.0f;
-    [SerializeField] float rotationMultiplier = 15;
 
     float direction;
 
-    void Start () {
+    void Start ()
+    {
     	// Use a multiplier to determine the amplitude of the horizontal movement
-    	direction = Random.Range(-1f, 1f);
+        if (fixDirection)
+    	    direction = 0.9f;
+        else
+    	    direction = Random.Range(-1f, 1f);
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		// Compute a sinusoidal movement for the x coordinate
 		float phi = Time.time / duration * 2 * Mathf.PI;
         float amplitude = Mathf.Cos(phi) * width * direction;
