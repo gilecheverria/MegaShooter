@@ -265,18 +265,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 454759957}
     m_Modifications:
-    - target: {fileID: 901528940, guid: de7315c73539af0a99288e42cb77456b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 901528943, guid: de7315c73539af0a99288e42cb77456b, type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 901528943, guid: de7315c73539af0a99288e42cb77456b, type: 3}
-      propertyPath: m_ReceiveShadows
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 568090663558874451, guid: de7315c73539af0a99288e42cb77456b,
         type: 3}
       propertyPath: m_Name
@@ -342,11 +330,6 @@ PrefabInstance:
       propertyPath: bar
       value: 
       objectReference: {fileID: 306741102}
-    - target: {fileID: 6288490246479108289, guid: de7315c73539af0a99288e42cb77456b,
-        type: 3}
-      propertyPath: state
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de7315c73539af0a99288e42cb77456b, type: 3}
 --- !u!4 &181094622 stripped

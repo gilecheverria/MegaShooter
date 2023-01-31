@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class BossWeapon : MonoBehaviour
 {
+    [SerializeField] float initialDelay;
     [SerializeField] float fireDelay;
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform spawnerParent;
@@ -20,10 +21,16 @@ public class BossWeapon : MonoBehaviour
     void Start()
     {
         // Wait before firing the first shot
-        nextFire = 6.0f;
+        nextFire = Time.time + initialDelay;
 
         // Get the empty that will be parent to all bullets
         bulletParent = GameObject.Find("BulletParent").transform;
+    }
+
+    // Reset the fire counters when the script is re-enabled
+    void OnEnable()
+    {
+        nextFire = Time.time + initialDelay;
     }
 
     // Update is called once per frame

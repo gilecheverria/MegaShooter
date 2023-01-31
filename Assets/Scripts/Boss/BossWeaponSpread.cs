@@ -11,6 +11,7 @@ using UnityEngine;
 
 public class BossWeaponSpread : MonoBehaviour
 {
+    [SerializeField] float initialDelay;
     [SerializeField] float waveDelay;
     [SerializeField] float minAngle;
     [SerializeField] float maxAngle;
@@ -27,7 +28,7 @@ public class BossWeaponSpread : MonoBehaviour
     void Start()
     {
         // Wait before firing the first shot
-        nextFire = 6.0f;
+        nextFire = Time.time + initialDelay;
 
         // Get the empty that will be parent to all bullets
         bulletParent = GameObject.Find("BulletParent").transform;
@@ -40,6 +41,12 @@ public class BossWeaponSpread : MonoBehaviour
         if (Time.time > nextFire) {
             StartCoroutine(FireGun());
         }
+    }
+
+    // Reset the fire counters when the script is re-enabled
+    void OnEnable()
+    {
+        nextFire = Time.time + initialDelay;
     }
 
 	// Fire a series of bullets after a delay
