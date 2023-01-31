@@ -15,13 +15,13 @@ public class Health : MonoBehaviour
     [SerializeField] HealthBar bar;
 
     int hp;
-    bool alive;
+    //bool alive;
 
     // Start is called before the first frame update
     void Start()
     {
         hp = maxHP;    
-        alive = true;
+        //alive = true;
         if (bar != null) {
             bar.Init(maxHP);
         }
@@ -41,7 +41,7 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        alive = false;
+        //alive = false;
 
         ScoreManager.score += worth;
         //Debug.Log("New score: " + ScoreManager.score);

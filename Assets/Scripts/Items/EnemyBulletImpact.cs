@@ -10,7 +10,7 @@ using UnityEngine;
 public class EnemyBulletImpact : MonoBehaviour {
 	[SerializeField] GameObject explosionPrefab;
     [SerializeField] GameObject impactPrefab;
-    [SerializeField] int damage = 1;    // Default value
+    //[SerializeField] int damage = 1;    // Default value
 
 	// Detect collisions with enemies
 	void OnTriggerEnter (Collider col)
