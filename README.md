@@ -1,4 +1,7 @@
 # MegaShooter
+
+![Title Screen](title_screen.png)
+
 Unity project based on Space Megaforce
 
 Design notes:
@@ -18,6 +21,15 @@ python3 -m http.server
 ### Music
 - https://aeronmusic.newgrounds.com/audio
 
+### Sound FX
+- https://freesound.org/
+
+### Fonts
+- http://www.fontsquirrel.com/
+- http://www.dafont.com/
+
+### Particles
+- http://www.kenney.nl
 
 ## TO DO
 
