@@ -5881,7 +5881,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Version: 2023-02-21'
+  m_Text: 'Version: YYYY-MM-DD'
 --- !u!222 &1262140701
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6297,6 +6297,7 @@ GameObject:
   - component: {fileID: 1861001844}
   - component: {fileID: 1861001843}
   - component: {fileID: 1861001845}
+  - component: {fileID: 1861001846}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -6344,6 +6345,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highScoreText: {fileID: 822102514}
+--- !u!114 &1861001846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861001842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8994de0eb330e7b786dcae887a79807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  versionText: {fileID: 1262140700}
+  date: 2023-04-20
 --- !u!1001 &1936936996
 PrefabInstance:
   m_ObjectHideFlags: 0
