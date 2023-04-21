@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 475586}
   - component: {fileID: 13675586}
+  - component: {fileID: 5120585822814133998}
   - component: {fileID: 5413524}
   - component: {fileID: 8277178}
   - component: {fileID: 10884080}
@@ -48,11 +49,24 @@ CapsuleCollider:
   m_GameObject: {fileID: 175586}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.15
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: -0.28, z: 0}
+--- !u!65 &5120585822814133998
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 2.2, z: 10}
+  m_Center: {x: 0, y: -0.3, z: 0}
 --- !u!54 &5413524
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -257,7 +271,6 @@ MonoBehaviour:
   explosionPrefab: {fileID: 4451634414502613712, guid: 09135dcfa6c84d2dd8e40edd021adeab,
     type: 3}
   impactPrefab: {fileID: 115368, guid: 47589040b4a42679388215eb360c0fdb, type: 3}
-  damage: 1
 --- !u!1 &2826511382960554015
 GameObject:
   m_ObjectHideFlags: 0

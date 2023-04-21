@@ -9,12 +9,12 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] int maxHP = 1;
     [SerializeField] int worth = 1;
     [SerializeField] GameObject explosion;
     [SerializeField] HealthBar bar;
 
-    int hp;
+    public int maxHP = 1;
+    public int hp;
     //bool alive;
 
     // Start is called before the first frame update
