@@ -12,8 +12,6 @@ Gilberto Echeverria
 2023-01-31      Use ScriptableObjects to simplify the management of new levels
 */
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -74,9 +72,6 @@ public class MusicObject : MonoBehaviour {
                 audioSource.Play();
             }
         }
-
-        //Debug.Log("OnSceneLoaded: " + scene.name);
-        //Debug.Log(mode);
     }
 
 }
