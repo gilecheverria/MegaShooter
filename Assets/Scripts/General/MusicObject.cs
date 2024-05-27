@@ -7,6 +7,8 @@
    - Detecting when a scene is loaded:
    https://docs.unity3d.com/ScriptReference/SceneManagement.SceneManager-sceneLoaded.html
    - Singleton:
+   https://gamedevbeginner.com/singletons-in-unity-the-right-way/
+   https://docs.unity3d.com/ScriptReference/Object.DontDestroyOnLoad.html
 
 Gilberto Echeverria
 2023-01-31      Use ScriptableObjects to simplify the management of new levels

@@ -9,7 +9,7 @@ Gilberto Echeverria
 
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Data",
+[CreateAssetMenu(fileName = "MusicData",
                  menuName = "ScriptableObjects/MusicListSO",
                  order = 1)]
 public class MusicListSO : ScriptableObject

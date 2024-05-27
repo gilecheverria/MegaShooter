@@ -3,7 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class LivesManager : MonoBehaviour {
+public class LivesManager : MonoBehaviour
+{
 	public int lives = 5;
 	public GameObject playerPrefab;
 	public Image[] livesIcons;
@@ -16,12 +17,14 @@ public class LivesManager : MonoBehaviour {
 	Vector3 startPosition;
 
 	// Initialize references when the scene starts
-	void Awake () {
+	void Awake ()
+	{
 		guiScript = GetComponent<GUIManager>();
 	}
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		// Set the initial score for this game to 0
 		ScoreManager.score = 0;
 
@@ -33,9 +36,9 @@ public class LivesManager : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
-		if (playerObject == null && respawningPlayer == false)
-		{
+	void Update ()
+	{
+		if (playerObject == null && respawningPlayer == false) {
 			StartCoroutine(RespawnPlayer());
 		}
 	}

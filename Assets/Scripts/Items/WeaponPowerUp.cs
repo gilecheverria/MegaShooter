@@ -1,14 +1,21 @@
-﻿using System.Collections;
+﻿/*
+Script on the Power-Up's, to increase the level of the players weapon
+
+Gilberto Echeverria
+2022-01-31
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponPowerUp : MonoBehaviour
 {
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter(Collider collider)
     {
-        if (col.tag == "Player")
+        if (collider.tag == "Player")
         {
-            PlayerWeapon pw = col.GetComponent<PlayerWeapon>();
+            PlayerWeapon pw = collider.GetComponent<PlayerWeapon>();
             pw.IncreaseLevel();
             Destroy(gameObject);
         }

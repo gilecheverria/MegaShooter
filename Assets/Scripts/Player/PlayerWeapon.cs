@@ -25,6 +25,8 @@ public class PlayerWeapon : MonoBehaviour
     AudioSource audioSource;
     Transform bulletParent;
 
+    PlayerData playerData;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +43,8 @@ public class PlayerWeapon : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         // Get the empty that will be parent to all bullets
         bulletParent = GameObject.Find("BulletParent").transform;
+        // Get a reference to the persistent data for the player
+        playerData = GetComponent<PlayerData>();
     }
 
     // Update is called once per frame
@@ -71,6 +75,7 @@ public class PlayerWeapon : MonoBehaviour
     public void IncreaseLevel()
     {
         weaponLevel++;
+        playerData.playerStatus.level = weaponLevel;
         guiManager.UpdateLevel(weaponLevel);
         audioSource.Play();
 
