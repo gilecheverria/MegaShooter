@@ -12,6 +12,7 @@ public class Health : MonoBehaviour
     [SerializeField] int worth = 1;
     [SerializeField] GameObject explosion;
     [SerializeField] HealthBar bar;
+    [SerializeField] bool isBoss;
 
     public int maxHP = 1;
     public int hp;
@@ -54,7 +55,17 @@ public class Health : MonoBehaviour
             Destroy(temp, 2);
         }
 
-        // Destroy the enemy
-        Destroy(gameObject);
+        if (isBoss) {
+            // In the case of a boss, go to the next scene
+            Invoke("GoToGameOver", 1.0f);
+        } else {
+            // Destroy the enemy
+            Destroy(gameObject);
+        }
+    }
+
+    void GoToGameOver()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 }

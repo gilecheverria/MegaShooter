@@ -25,8 +25,13 @@ public class SeekerMotion : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // If the target was lost (destroyed) look for another instance
         if (!target) {
-            target = GameObject.FindWithTag("Player").transform;
+            GameObject player = GameObject.FindWithTag("Player");
+            // Get the transform for the new player ship
+            if (player) {
+                target = player.transform;
+            }
         } else {
             transform.LookAt(target.position);
             rb.velocity = transform.forward * speed;

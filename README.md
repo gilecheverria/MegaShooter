@@ -38,8 +38,8 @@ python3 -m http.server
 - [x] Add visual changes to identify Boss state
 - [ ] Add a behaviour to signify when the Boss is changing state
 - [ ] Add more patterns to Boss attacks
-- [ ] Add more particles to Boss explosion
-- [ ] Add victory screen
+- [x] Add more particles to Boss explosion
+- [x] Add victory screen
 - [ ] Add a checkpoint to finishing the first stage
 - [ ] Use ScriptableObjects to preserve the player state between scenes
 - [ ] Centralize player data on the Scriptable Object (level, lives, etc.)
