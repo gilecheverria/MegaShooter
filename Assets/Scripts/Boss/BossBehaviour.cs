@@ -9,7 +9,7 @@ using System.Collections;
 using UnityEngine;
 
 public enum BossState { ENTRANCE, SINE, SPREAD, TRANS, MISSILES }
-public enum BossCondition { OK, DAMAGED }
+public enum BossCondition { OK, DAMAGED, CRITICAL }
 
 public class BossBehaviour : MonoBehaviour
 {
@@ -29,7 +29,11 @@ public class BossBehaviour : MonoBehaviour
     [SerializeField] BossMissiles bossMissiles;
     [SerializeField] GameObject shield;
 
+    // The mesh of the Boss model, to be able to change its color
+    [SerializeField] MeshRenderer meshRenderer;
+
     Health health;
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,9 +72,9 @@ public class BossBehaviour : MonoBehaviour
     // Randomly chose from the available attack patters
     void NextAttack()
     {
-        if(condition == BossCondition.OK) {
+        //if(condition == BossCondition.OK) {
             CheckHealth();
-        }
+        //}
 
         int attack = Random.Range(0, 10);
 
@@ -92,8 +96,13 @@ public class BossBehaviour : MonoBehaviour
     // Decrease time between attacks when health is less than half
     void CheckHealth()
     {
-        if(health.hp <= health.maxHP / 2) {
+        if(health.hp <= health.maxHP / 2 && condition == BossCondition.OK) {
             condition = BossCondition.DAMAGED;
+            meshRenderer.materials[0].color = Color.yellow;
+            stateDuration /= 2;
+        } else if (health.hp <= health.maxHP / 4 && condition == BossCondition.DAMAGED) {
+            condition = BossCondition.CRITICAL;
+            meshRenderer.materials[0].color = Color.red;
             stateDuration /= 2;
         }
     }

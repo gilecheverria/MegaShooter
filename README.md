@@ -34,9 +34,12 @@ python3 -m http.server
 ## TO DO
 
 - [x] Boss scene
-- [ ] Ad another state for the Boss when HP is less than 25. Make it faster.
+- [ ] Add another state for the Boss when HP is less than 25. Make it faster.
+- [x] Add visual changes to identify Boss state
 - [ ] Add more patterns to boss attacks
+- [ ] Add victory screen
 - [ ] Add a checkpoint to finishing the first stage
+- [ ] Use ScriptableObjects to preserve the player state between scenes
 - [ ] Integrate boss into the first stage
 - [ ] Design a clear structure for the first stage
 - [ ] Add more complex enemies during the stage (Some which shoot back)
