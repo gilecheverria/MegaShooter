@@ -34,6 +34,7 @@ python3 -m http.server
 ## TO DO
 
 - [x] Boss scene
+- [ ] Ad another state for the Boss when HP is less than 25. Make it faster.
 - [ ] Add more patterns to boss attacks
 - [ ] Add a checkpoint to finishing the first stage
 - [ ] Integrate boss into the first stage
